@@ -1,5 +1,5 @@
 <template>
-<div class="md:container md:mx-auto">
+<div class="md:container md:mx-auto md:m-4">
 <h1>Pages</h1>
 <ul>
   <li><NuxtLink to="/">Index</NuxtLink></li>
