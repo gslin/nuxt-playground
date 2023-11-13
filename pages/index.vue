@@ -1,4 +1,4 @@
 <template>
-<h1>Test</h1>
+<h1>index</h1>
 <hr>
 </template>
