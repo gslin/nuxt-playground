@@ -7,5 +7,6 @@ counter.count++;
 <template>
 <h3>about</h3>
 <hr/>
-<p>Current count: {{ counter.count }}</p>
+<p>Current count: {{ counter.count }}.</p>
+<button @click="counter.count=0;">Reset</button>
 </template>
