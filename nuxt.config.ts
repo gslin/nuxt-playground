@@ -2,6 +2,7 @@
 export default defineNuxtConfig({
   css: ['~/assets/css/main.css'],
   devtools: { enabled: false },
+  layout: true,
   modules: [
     '@pinia/nuxt',
     '@pinia-plugin-persistedstate/nuxt',
@@ -13,5 +14,4 @@ export default defineNuxtConfig({
       tailwindcss: {},
     },
   },
-  layout: true,
 })
