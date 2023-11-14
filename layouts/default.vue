@@ -1,7 +1,7 @@
 <template>
 <div class="container mx-auto m-4">
 <AppHeader/>
-<div class="flex flex-row">
+<div class="flex flex-row my-4">
   <div class="shrink mr-4">
     <h2>Pages</h2>
     <ul>

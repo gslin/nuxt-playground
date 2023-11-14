@@ -4,7 +4,7 @@ const counter = useCounterStore();
 </script>
 
 <template>
-<h2>index</h2>
+<h3>index</h3>
 <hr/>
 <p>This is <code>index.vue</code>.</p>
 <p>Current count: {{ counter.count }}</p>

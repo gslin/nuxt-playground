@@ -5,7 +5,7 @@ counter.count++;
 </script>
 
 <template>
-<h2>about</h2>
+<h3>about</h3>
 <hr/>
 <p>Current count: {{ counter.count }}</p>
 </template>
