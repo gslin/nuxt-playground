@@ -1,13 +1,18 @@
 <template>
-<div class="md:container md:mx-auto md:m-4">
+<div class="container mx-auto m-4">
 <AppHeader/>
-<h1>Pages</h1>
-<ul>
-  <li><NuxtLink to="/">Index</NuxtLink></li>
-  <li><NuxtLink to="/about">About</NuxtLink></li>
-</ul>
-<hr/>
-<NuxtPage/>
+<div class="flex flex-row">
+  <div class="shrink mr-4">
+    <h2>Pages</h2>
+    <ul>
+      <li><NuxtLink to="/">Index</NuxtLink></li>
+      <li><NuxtLink to="/about">About</NuxtLink></li>
+    </ul>
+  </div>
+  <div class="ml-4">
+    <NuxtPage/>
+  </div>
+</div>
 <AppFooter/>
 </div>
 </template>
