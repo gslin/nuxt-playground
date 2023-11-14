@@ -16,7 +16,11 @@ if (res.status === 200) {
 <p>Current count: {{ counter.count }}.</p>
 <hr/>
 <dd>
-<dl>artist_name + artist_href</dl>
-<dt><a :href="data.artist_href">{{ data.artist_name }}</a></dt>
+  <dl>Artist (artist_name + artist_href)</dl>
+  <dt><a :href="data.artist_href">{{ data.artist_name }}</a></dt>
+  <dl>Source (source_url)</dl>
+  <dt><a :href="data.source_url">{{ data.source_url }}</a></dt>
+  <dl>Image (url)</dl>
+  <dt><img :src="data.url"/></dt>
 </dd>
 </template>
