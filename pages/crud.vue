@@ -1,7 +1,7 @@
 <script setup>
 import { ref } from 'vue';
 
-const username = ref();
+const username = ref('');
 </script>
 
 <template>
