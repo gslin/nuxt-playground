@@ -1,29 +1,16 @@
 <script setup>
+import { ref } from 'vue';
+
+const username = ref();
 </script>
 
 <template>
 <h3>CRUD</h3>
 <hr/>
-<table class="table-auto">
-  <caption>Table 1</caption>
-  <thead>
-    <tr>
-      <th class="border">#</th>
-      <th class="border">Column 1</th>
-      <th class="border">Column 2</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td class="border">Test 1</td>
-      <td class="border">Test 2</td>
-      <td class="border">Test 3</td>
-    </tr>
-    <tr>
-      <td class="border">Test 4</td>
-      <td class="border">Test 5</td>
-      <td class="border">Test 6</td>
-    </tr>
-  </tbody>
-</table>
+<form>
+  <input class="border" name="username" placeholder="username" type="text" v-model="username" />
+  <input class="border" name="password" placeholder="password" type="password" v-model="password" />
+  <input class="border" name="submit" type="submit"/>
+</form>
+<p>Username: {{ username }}</p>
 </template>
