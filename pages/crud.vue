@@ -1,16 +1,35 @@
 <script setup>
-import { ref } from 'vue';
+import { reactive, ref } from 'vue';
 
-const username = ref('');
+const d = reactive({username: '', password: ''});
+
+const r = ref({});
+const c = ref(0);
+
+async function login() {
+  const res = await fetch('https://home.gslin.org/tmp/test-login.php', {
+    method: 'POST',
+    cache: 'no-cache',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(d),
+  });
+
+  r.value = await res.json();
+  c.value = res.status;
+}
 </script>
 
 <template>
 <h3>CRUD</h3>
 <hr/>
-<form>
-  <input class="border" name="username" placeholder="username" type="text" v-model="username" />
-  <input class="border" name="password" placeholder="password" type="password" v-model="password" />
+<form @submit.prevent="login();">
+  <input class="border" name="username" placeholder="username" type="text" v-model="d.username" />
+  <input class="border" name="password" placeholder="password" type="password" v-model="d.password" />
   <input class="border" name="submit" type="submit"/>
 </form>
-<p>Username: {{ username }}</p>
+<p>Username: <code>{{ d.username }}</code>.</p>
+<p>Code: <code>{{ c }}</code>.</p>
+<p>Response: <code>{{ r }}</code>.</p>
 </template>
