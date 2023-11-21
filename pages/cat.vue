@@ -1,6 +1,5 @@
 <script setup>
 import { useCounterStore } from '@/stores/counter';
-import { reactive, watch } from 'vue';
 
 const counter = useCounterStore();
 const data = reactive({});

@@ -1,6 +1,4 @@
 <script setup>
-import { reactive, ref } from 'vue';
-
 const d = reactive({username: '', password: ''});
 
 const r = ref({});
