@@ -15,12 +15,12 @@ if (res.status.value === 'success') {
 <hr/>
 <p>Current count: {{ counter.count }}.</p>
 <hr/>
-<dd>
-  <dl>Artist (artist_name + artist_href)</dl>
-  <dt><a :href="data.artist_href">{{ data.artist_name }}</a></dt>
-  <dl>Source (source_url)</dl>
-  <dt><a :href="data.source_url">{{ data.source_url }}</a></dt>
-  <dl>Image (url)</dl>
-  <dt><img :src="data.url"/></dt>
-</dd>
+<dl>
+  <dt>Artist (artist_name + artist_href)</dt>
+  <dd><a :href="data.artist_href">{{ data.artist_name }}</a></dd>
+  <dt>Source (source_url)</dt>
+  <dd><a :href="data.source_url">{{ data.source_url }}</a></dd>
+  <dt>Image (url)</dt>
+  <dd><img :src="data.url"/></dd>
+</dl>
 </template>
