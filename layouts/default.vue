@@ -1,3 +1,9 @@
+<script setup>
+useHead({
+  title: "Gea-Suan Lin's testing site",
+});
+</script>
+
 <template>
 <div class="container mx-auto m-4">
 <AppHeader/>
