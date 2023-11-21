@@ -1,12 +1,17 @@
 <script setup>
 import { useCounterStore } from '@/stores/counter';
+import { reactive } from 'vue';
 
 const counter = useCounterStore();
-let data = {};
+const data = reactive({});
 
 const res = await useFetch('https://nekos.best/api/v2/neko');
 if (res.status.value === 'success') {
-  data = res.data.value.results[0];
+  const r = res.data.value.results[0];
+  data.artist_href = r.artist_href;
+  data.artist_name = r.artist_name;
+  data.source_url = r.source_url;
+  data.url = r.url;
 }
 </script>
 
