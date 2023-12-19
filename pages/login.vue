@@ -20,7 +20,7 @@ async function login() {
 </script>
 
 <template>
-<h3>CRUD</h3>
+<h3>Login</h3>
 <hr/>
 <form @submit.prevent="login();">
   <input class="border" name="username" placeholder="username" type="text" v-model="d.username" />
