@@ -4,14 +4,13 @@ const list = ref([]);
 const form = reactive({});
 
 async function refresh() {
-  const res = await fetch(apiUrl);
-  const j = await res.json();
-  list.value = j.data;
+  const res = await useFetch(apiUrl);
+  list.value = res.data.value.data;
 }
 refresh();
 
 async function create() {
-  await fetch(apiUrl, {
+  await $fetch(apiUrl, {
     body: JSON.stringify({
       fullname: form.fullname,
       username: form.username,
@@ -26,7 +25,7 @@ async function create() {
 }
 
 async function del(id) {
-  await fetch(apiUrl + '/' + id, {
+  await $fetch(apiUrl + '/' + id, {
     cache: 'no-cache',
     method: 'DELETE',
   });
