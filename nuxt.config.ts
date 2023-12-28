@@ -4,6 +4,7 @@ export default defineNuxtConfig({
   devtools: { enabled: false },
   layout: true,
   modules: [
+    '@nuxt/ui',
     '@pinia/nuxt',
     '@pinia-plugin-persistedstate/nuxt',
   ],
