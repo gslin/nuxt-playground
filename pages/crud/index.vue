@@ -60,7 +60,7 @@ async function del(id) {
     <form @submit.prevent="del(deleteModalId); refresh(); isDeleteOpen = false;">
       <div class="flex justify-between m-5">
         <button class="bg-grey outline p-2 rounded" @click.prevent="isDeleteOpen = false;">Cancel</button>
-        <input class="bg-green outline p-2 rounded" type="submit" value="Confirm"/>
+        <input class="bg-green outline p-2 rounded" name="submit" type="submit" value="Confirm"/>
       </div>
     </form>
   </UModal>
