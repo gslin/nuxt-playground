@@ -55,16 +55,16 @@ async function del(id) {
       <td><button @click="deleteModalId = item.id; isDeleteOpen = true;">Delete</button></td>
     </tr>
   </tbody>
-
-  <UModal v-model="isDeleteOpen">
-    <form @submit.prevent="del(deleteModalId); refresh(); isDeleteOpen = false;">
-      <div class="flex justify-between m-5">
-        <button class="bg-grey outline p-2 rounded" @click.prevent="isDeleteOpen = false;">Cancel</button>
-        <input class="bg-green outline p-2 rounded" name="submit" type="submit" value="Confirm"/>
-      </div>
-    </form>
-  </UModal>
 </table>
+
+<UModal v-model="isDeleteOpen">
+  <form @submit.prevent="del(deleteModalId); refresh(); isDeleteOpen = false;">
+    <div class="flex justify-between m-5">
+      <button class="bg-grey outline p-2 rounded" @click.prevent="isDeleteOpen = false;">Cancel</button>
+      <input class="bg-green outline p-2 rounded" name="submit" type="submit" value="Confirm"/>
+    </div>
+  </form>
+</UModal>
 
 <h4>Create</h4>
 <form @submit.prevent="create();">
