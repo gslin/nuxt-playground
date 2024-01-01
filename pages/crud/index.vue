@@ -49,7 +49,10 @@ async function del(id) {
         <th>Actions</th>
       </thead>
       <tbody>
-        <tr v-for="item in list">
+        <tr
+          v-for="item in list"
+          :key="item.id"
+        >
           <td>{{ item.id }}</td>
           <td>{{ item.username }}</td>
           <td>{{ item.fullname }}</td>
