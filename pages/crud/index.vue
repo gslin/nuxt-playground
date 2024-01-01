@@ -37,7 +37,7 @@ async function del(id) {
 
 function enableDeleteModal(id) {
   deleteModalId = id;
-  isDeleteOpen = true;
+  isDeleteOpen.value = true;
 }
 </script>
 
