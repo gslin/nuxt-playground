@@ -17,16 +17,18 @@ watch(res.status, () => {
 </script>
 
 <template>
-<h3>cat</h3>
-<hr/>
-<p>Current count: {{ counter.count }}.</p>
-<hr/>
-<dl>
-  <dt>Artist (artist_name + artist_href)</dt>
-  <dd><a :href="data.artist_href">{{ data.artist_name }}</a></dd>
-  <dt>Source (source_url)</dt>
-  <dd><a :href="data.source_url">{{ data.source_url }}</a></dd>
-  <dt>Image (url)</dt>
-  <dd><img :src="data.url"/></dd>
-</dl>
+  <div>
+    <h3>cat</h3>
+    <hr>
+    <p>Current count: {{ counter.count }}.</p>
+    <hr>
+    <dl>
+      <dt>Artist (artist_name + artist_href)</dt>
+      <dd><a :href="data.artist_href">{{ data.artist_name }}</a></dd>
+      <dt>Source (source_url)</dt>
+      <dd><a :href="data.source_url">{{ data.source_url }}</a></dd>
+      <dt>Image (url)</dt>
+      <dd><img :src="data.url"></dd>
+    </dl>
+  </div>
 </template>
