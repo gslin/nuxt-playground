@@ -34,6 +34,11 @@ async function del(id) {
   });
   refresh();
 }
+
+function enableDeleteModal(id) {
+  deleteModalId = id;
+  idDeleteOpen = true;
+}
 </script>
 
 <template>
@@ -57,7 +62,7 @@ async function del(id) {
           <td>{{ item.username }}</td>
           <td>{{ item.fullname }}</td>
           <td>
-            <button @click="deleteModalId = item.id; isDeleteOpen = true;">
+            <button @click="enableDeleteModal(item.id)">
               Delete
             </button>
           </td>
