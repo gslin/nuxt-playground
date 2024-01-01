@@ -6,11 +6,10 @@ export default {
     './components/**/*.{js,ts,vue}',
     './layouts/**/*.vue',
     './pages/**/*.vue',
-    './plugins/**/*.{js,ts}',
+    './plugins/**/*.{js,ts}'
   ],
   theme: {
-    extend: {},
+    extend: {}
   },
-  plugins: [],
+  plugins: []
 }
-
