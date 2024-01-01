@@ -4,8 +4,7 @@ module.exports = {
     es2021: true
   },
   extends: [
-    'standard',
-    'plugin:vue/vue3-essential'
+    '@nuxt/eslint-config'
   ],
   overrides: [
     {
@@ -27,6 +26,7 @@ module.exports = {
   plugins: [
     'vue'
   ],
+  root: true,
   rules: {
   }
 }
