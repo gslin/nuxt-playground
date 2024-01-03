@@ -7,10 +7,10 @@ let deleteModalId = null
 const isDeleteOpen = ref(false)
 
 async function refresh() {
-  const res = await useFetch(apiUrl);
-  list.value = res.data.value.data;
+  const res = await useFetch(apiUrl)
+  list.value = res.data.value.data
 }
-refresh();
+refresh()
 
 async function create() {
   await $fetch(apiUrl, {
@@ -23,21 +23,21 @@ async function create() {
       'Content-Type': 'application/json',
     },
     method: 'POST',
-  });
-  refresh();
+  })
+  refresh()
 }
 
 async function del(id) {
   await $fetch(apiUrl + '/' + id, {
     cache: 'no-cache',
     method: 'DELETE',
-  });
-  refresh();
+  })
+  refresh()
 }
 
 function enableDeleteModal(id) {
-  deleteModalId = id;
-  isDeleteOpen.value = true;
+  deleteModalId = id
+  isDeleteOpen.value = true
 }
 </script>
 
@@ -71,11 +71,11 @@ function enableDeleteModal(id) {
     </table>
 
     <UModal v-model="isDeleteOpen">
-      <form @submit.prevent="del(deleteModalId); refresh(); isDeleteOpen = false;">
+      <form @submit.prevent="del(deleteModalId); refresh(); isDeleteOpen = false">
         <div class="flex justify-between m-5">
           <button
             class="bg-grey outline p-2 rounded"
-            @click.prevent="isDeleteOpen = false;"
+            @click.prevent="isDeleteOpen = false"
           >
             Cancel
           </button>
@@ -90,7 +90,7 @@ function enableDeleteModal(id) {
     </UModal>
 
     <h4>Create</h4>
-    <form @submit.prevent="create();">
+    <form @submit.prevent="create()">
       <input
         v-model="form.username"
         placeholder="Username"
