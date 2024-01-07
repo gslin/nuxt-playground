@@ -1,4 +1,5 @@
 <script setup>
+import AppTestComponent from '~/components/AppTestComponent.vue'
 </script>
 
 <template>
