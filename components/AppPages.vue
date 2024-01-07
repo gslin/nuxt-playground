@@ -27,6 +27,11 @@
           CRUD
         </NuxtLink>
       </li>
+      <li>
+        <NuxtLink to="/test-components">
+          Test Components
+        </NuxtLink>
+      </li>
     </ul>
   </div>
 </template>
