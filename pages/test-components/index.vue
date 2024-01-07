@@ -17,7 +17,8 @@ const posts = ref([
   <div>
     <h1>Test Components</h1>
     <hr>
-    <AppTestComponent
+    <component
+      :is="AppTestComponent"
       v-for="post in posts"
       :key="post.id"
       :post="post"
